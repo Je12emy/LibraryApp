@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="ejSP9GicMfjZH685ejjR3QTHM+o=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="TWYo+6WSjr/wD6oPSnPWWNiBHDA=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="LibraryWebServiceSoap">
       <properties>
@@ -112,10 +112,10 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="LibraryWebServiceSoap" contract="LibraryWS.LibraryWebServiceSoap" bindingType="basicHttpBinding" address="http://192.168.0.114:8088/LibraryWebService.asmx" bindingConfiguration="LibraryWebServiceSoap">
+    <endpoint name="LibraryWebServiceSoap" contract="LibraryWS.LibraryWebServiceSoap" bindingType="basicHttpBinding" address="http://www.libraryapponline.somee.com/LibraryWebService.asmx" bindingConfiguration="LibraryWebServiceSoap">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>http://192.168.0.114:8088/LibraryWebService.asmx</serializedValue>
+          <serializedValue>http://www.libraryapponline.somee.com/LibraryWebService.asmx</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

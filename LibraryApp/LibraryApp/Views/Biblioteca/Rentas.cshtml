@@ -53,7 +53,7 @@
                                             <th scope="col"> @prestamo.codigoPrestamo </th>
                                             <td scope="col"> @prestamo.codigoSocio </td>
                                             <td scope="col"> @prestamo.codigoLibro </td>
-                                            @if (Convert.ToBoolean(prestamo.estado))
+                                            @if (!Convert.ToBoolean(prestamo.estado))
                                             {
                                                 <td scope="col" style="color:#27ae60"> @prestamo.fechaReserva </td>
                                                 <td scope="col" style="color:#27ae60"> No pendiente </td>

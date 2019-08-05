@@ -16,7 +16,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>08/03/2019 00:20:53</publishTime>
     </File>
     <File Include="bin/LibraryWebService.dll">
-      <publishTime>08/05/2019 02:49:47</publishTime>
+      <publishTime>08/05/2019 14:06:49</publishTime>
     </File>
     <File Include="bin/Microsoft.AI.Agent.Intercept.dll">
       <publishTime>12/07/2015 19:04:38</publishTime>

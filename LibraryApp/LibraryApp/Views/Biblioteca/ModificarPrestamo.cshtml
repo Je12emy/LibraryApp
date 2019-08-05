@@ -23,13 +23,13 @@
                     @using (Html.BeginForm())
             {
                         <label for="codigoPrestamo"> Codigo de Prestamo </label>
-                        @Html.TextBoxFor(x => x.codigoPrestamo, new { @class = "form-control", @type = "number", @id = "codigoPrestamo", @placeholder = "Ingrese el Codigo del Socio" })
+                        @Html.TextBoxFor(x => x.codigoPrestamo, new { @class = "form-control", @type = "number", @id = "codigoPrestamo", @placeholder = "Ingrese el Codigo del Prestamo" })
 
                         <label for="codigoSocio"> Codigo de Socio </label>
                         @Html.TextBoxFor(x => x.codigoSocio, new { @class = "form-control", @type = "number", @id = "codigoSocio", @placeholder = "Ingrese el Codigo del Socio" })
 
                         <label for="codigoLibro"> Codigo de Libro </label>
-                        @Html.TextBoxFor(x => x.codigoLibro, new { @class = "form-control", @type = "number", @id = "codigoLibro", @placeholder = "Ingrese el Codigo del Prestamo" })
+                        @Html.TextBoxFor(x => x.codigoLibro, new { @class = "form-control", @type = "number", @id = "codigoLibro", @placeholder = "Ingrese el Codigo del Libro" })
 
                         <label for="fechaPrestamo"> Fecha de Prestamo </label>
                         @Html.TextBoxFor(x => x.fechaReserva, new { @class = "form-control", @type = "datetime-local", @id = "fechaPrestamo", @placeholder = "Ingrese el Codigo del Prestamo" })
@@ -37,8 +37,8 @@
                         <label for="disponibilidad"> Estado </label>
                                     @Html.DropDownListFor(x => x.estado, new[]
                                               {
-                                                  new SelectListItem() { Text = "Pendiente", Value = bool.FalseString},
-                                                  new SelectListItem() { Text = "No Pendiente", Value = bool.TrueString}
+                                                  new SelectListItem() { Text = "Pendiente", Value = bool.TrueString},
+                                                  new SelectListItem() { Text = "No Pendiente", Value = bool.FalseString}
                                               }, new { @type = "select" })
 
                         <br>

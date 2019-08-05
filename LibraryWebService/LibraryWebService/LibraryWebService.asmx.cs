@@ -20,7 +20,9 @@ namespace LibraryWebService
     public class LibraryWebService : System.Web.Services.WebService
     {
         #region Metodos de BD
-        static string Cadena_Conexion = "Data Source=192.168.0.114;Initial Catalog=Library;Persist Security Info=True;User ID=PrograMVC;Password=PrograMVC";
+        // Local: Data Source=192.168.0.114;Initial Catalog=Library;Persist Security Info=True;User ID=PrograMVC;Password=PrograMVC
+        // Publicada: "workstation id=LibraryApp.mssql.somee.com;packet size=4096;user id=Je12emy_SQLLogin_1;pwd=2he7c6khw7;data source=LibraryApp.mssql.somee.com;persist security info=False;initial catalog=LibraryApp"
+        static string Cadena_Conexion = "workstation id=LibraryApp.mssql.somee.com;packet size=4096;user id=Je12emy_SQLLogin_1;pwd=2he7c6khw7;data source=LibraryApp.mssql.somee.com;persist security info=False;initial catalog=LibraryApp";
         static SqlConnection Conexion = new SqlConnection(Cadena_Conexion);
 
         

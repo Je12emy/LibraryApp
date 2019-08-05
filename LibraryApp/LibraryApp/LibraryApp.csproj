@@ -140,13 +140,14 @@
     <Content Include="Service References\LibraryWS\LibraryApp.LibraryWS.HistorialSocioResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
-    <None Include="Service References\LibraryWS\LibraryWebService.disco" />
     <None Include="Service References\LibraryWS\configuration91.svcinfo" />
     <None Include="Service References\LibraryWS\configuration.svcinfo" />
+    <None Include="Service References\LibraryWS\LibraryWebService1.wsdl" />
     <None Include="Service References\LibraryWS\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <None Include="Service References\LibraryWS\LibraryWebService1.disco" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -175,7 +176,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Views\Home\Index.cshtml" />
-    <None Include="Service References\LibraryWS\LibraryWebService.wsdl" />
     <Content Include="Views\Consultar\Buscar.cshtml" />
     <Content Include="Views\Consultar\Ubicacion.cshtml" />
     <Content Include="Views\Socio\AreaSocio.cshtml" />

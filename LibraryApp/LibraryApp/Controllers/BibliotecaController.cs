@@ -179,7 +179,7 @@ namespace LibraryApp.Controllers
             if (ModelState.IsValid)
             {
                 int i;
-                i = cliente.InsertarPrestamo(_prestamo.codigoSocio,_prestamo.codigoLibro,_prestamo.fechaReserva,_prestamo.estado);
+                i = cliente.InsertarPrestamo(_prestamo.codigoSocio,_prestamo.codigoLibro,_prestamo.fechaReserva,true);
                 if (i > 0)
                 {
                     return RedirectToAction("Rentas");

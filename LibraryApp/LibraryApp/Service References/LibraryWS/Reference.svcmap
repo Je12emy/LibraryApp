@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://192.168.0.114:8088/LibraryWebService.asmx" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://www.libraryapponline.somee.com/LibraryWebService.asmx" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="LibraryWebService.wsdl" MetadataType="Wsdl" ID="5aa722b0-ebf3-4fb4-8fa2-47c725971dea" SourceId="1" SourceUrl="http://192.168.0.114:8088/LibraryWebService.asmx?wsdl" />
-    <MetadataFile FileName="LibraryWebService.disco" MetadataType="Disco" ID="695bd580-7a7a-4402-b6fd-cc0f9b66ef31" SourceId="1" SourceUrl="http://192.168.0.114:8088/LibraryWebService.asmx?disco" />
+    <MetadataFile FileName="LibraryWebService1.disco" MetadataType="Disco" ID="f2dffc64-a7a6-4ea5-a79e-efd65b00860b" SourceId="1" SourceUrl="http://www.libraryapponline.somee.com/LibraryWebService.asmx?disco" />
+    <MetadataFile FileName="LibraryWebService1.wsdl" MetadataType="Wsdl" ID="d44d20e4-cda8-4181-a7a1-a9ac61cd6d6c" SourceId="1" SourceUrl="http://www.libraryapponline.somee.com/LibraryWebService.asmx?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
