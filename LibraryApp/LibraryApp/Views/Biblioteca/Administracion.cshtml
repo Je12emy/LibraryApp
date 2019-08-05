@@ -1,0 +1,30 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link href="~/Content/Bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/Bootstrap/bootstrap-grid.min.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/CSS/Administracion.css" rel="stylesheet" />
+    <title>Biblioteca</title>
+</head>
+<body>
+    <div class="text-center">
+        <h1 class="display-1"> Area Administrativa </h1>
+        <h2 class="display-4"> Acciones </h2>
+        
+        <div class="list-group">
+            @Html.ActionLink("Manejar catalogo de libros", "Catalogo", "",new { @class = "list-group-item list-group-item-action " })
+            
+            @Html.ActionLink("Gestionar Rentas", "Rentas", "", new { @class = "list-group-item list-group-item-action " })
+            @Html.ActionLink("Gestionar Socios", "Socios", "",new { @class = "list-group-item list-group-item-action " })
+        </div>
+        @Html.ActionLink("Volver", "Index", "Home")
+    </div>
+</body>
+</html>

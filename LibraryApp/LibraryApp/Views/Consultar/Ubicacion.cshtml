@@ -1,0 +1,46 @@
+﻿@model LibraryApp.Models.Catalogo
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/Bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/Bootstrap/bootstrap-grid.min.css" rel="stylesheet" />
+    <title>Ubicacion</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="display-2 text-center"> Hemos encontrado tu Libro </h1>
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Codigo de Libro</th>
+                    <th scope="col">Titulo</th>
+                    <th scope="col">Autor</th>
+                    <th scope="col">Disponibilidad</th>
+                    <th scope="col">Ubicacion </th>
+                    <th scope="col">Signatura </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">@Model.codigoLibro</th>
+                    <td>@Model.tituloLibro</td>
+                    <td>@Model.autor</td>
+                    <td>@Model.disponibilidad</td>
+                    <td>@Model.ubicacion</td>
+                    <td>@Model.signatura</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="text-center">
+            @Html.ActionLink("Hacer otra consulta","Buscar",null,null)
+        </div>
+    </div>
+</body>
+</html>

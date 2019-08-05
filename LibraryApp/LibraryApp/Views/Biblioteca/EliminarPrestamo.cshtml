@@ -1,0 +1,39 @@
+﻿@model LibraryApp.Models.Prestamo
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link href="~/Content/Bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/Bootstrap/bootstrap-grid.min.css" rel="stylesheet" />
+    <link href="~/Content/CSS/Login.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Modificar un Libro</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="box">
+                <h1> Eliminar Libro </h1>
+                <div class="col-12">
+                    @using (Html.BeginForm())
+            {
+                        <label for="codigo"> Codigo del Prestamo </label>
+                        @Html.TextBoxFor(x => x.codigoPrestamo, new { @class = "form-control", @type = "number", @id = "codigo", @placeholder = "Ingrese el codigo del libro." })
+                        <br>
+                        <input type="submit" class="btn-primary" value="Eliminar">
+                    }
+
+                </div>
+                <div class="text-center">
+                    @Html.ActionLink("Volver", "Rentas")
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

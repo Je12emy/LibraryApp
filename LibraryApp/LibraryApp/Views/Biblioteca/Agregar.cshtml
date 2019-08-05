@@ -1,0 +1,54 @@
+﻿@model LibraryApp.Models.Catalogo
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link href="~/Content/Bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/Bootstrap/bootstrap-grid.min.css" rel="stylesheet" />
+    <link href="~/Content/CSS/Login.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Agregar un Libro</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="box">
+                <h1> Agregar Libro </h1>
+                <div class="col-12">
+                    @using (Html.BeginForm())
+            {
+                        <label for="titulo"> Titulo del Libro </label>
+                        @Html.TextBoxFor(x => x.tituloLibro, new { @class = "form-control", @type = "text", @id = "titulo", @placeholder = "Ingrese el nombre del libro." })
+
+                        <label for="autor"> Autor del Libro </label>
+                        @Html.TextBoxFor(x => x.autor, new { @class = "form-control", @type = "text", @id = "autort", @placeholder = "Ingrese el autor del libro" })
+
+                        <label for="disponibilidad"> Disponibilidad </label>
+                        @Html.DropDownListFor(x => x.disponibilidad, new[]
+                                              {
+                                                  new SelectListItem() { Text = "Disponible", Value = bool.TrueString},
+                                                  new SelectListItem() { Text = "No Disponible", Value = bool.FalseString}
+                                              }, new { @type = "select" })
+
+
+                        <label for="Ubicacion"> Codigo de Ubicacion </label>
+                        @Html.TextBoxFor(x => x.codigoUbicacion, new { @class = "form-control", @type = "number", @id = "ubicacion", @placeholder = "Ingrese el codigo de ubicacion del libro" })
+
+                        <br>
+                        <input type="submit" class="btn-primary" value="Agregar">
+                    }
+                </div>
+                <div class="text-center">
+                    @Html.ActionLink("Volver", "Catalogo")
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

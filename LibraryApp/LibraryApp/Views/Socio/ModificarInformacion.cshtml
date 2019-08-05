@@ -1,0 +1,45 @@
+﻿@model LibraryApp.Models.Socio
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link href="~/Content/Bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/Bootstrap/bootstrap-grid.min.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Modificar Informacion</title>
+</head>
+<body>
+    <div class="container-fluid"> 
+        <h1 class="text-center"> Modificar mis Datos </h1>
+        <div class="row">
+            <div class="col-12">
+                @using (Html.BeginForm())
+                {
+                    <label for="nombreInput"> Nombre </label>
+                    @Html.TextBoxFor(x => x.nombreSocio, new { @class = "form-control", @type = "text", @id = "nombreInput", @placeholder = "Ingrese su Nombre" })
+                    <br>
+                    <label for="primerApellidoInput"> Primer Apellido </label>
+                    @Html.TextBoxFor(x => x.primerApellido, new { @class = "form-control", @type = "text", @id = "primerApellidoInput", @placeholder = "Ingrese su Primer Apellido" })
+                    <br>
+                    <label for="segundoApellidoInput"> Segundo Apellido </label>
+                    @Html.TextBoxFor(x => x.segundoApellido, new { @class = "form-control", @type = "text", @id = "segundoApellidoInput", @placeholder = "Ingrese su Segundo Apellido" })
+                    <br>
+                    <label for="direccionSocio"> Direccion </label>
+                    @Html.TextBoxFor(x => x.direccionSocio, new { @class = "form-control", @type = "text", @id = "direccionSocio", @placeholder = "Ingrese su Direccion" })
+                    <br>
+                    <input type="submit" class="btn-primary" value="Modificar">
+                }
+            </div>
+          
+        </div>
+        <div class="text-center">
+            @Html.ActionLink("Volver", "IniciarSesion", "", new { style = "text-allign:center;" })
+        </div>
+        
+    </div>
+</body>
+</html>

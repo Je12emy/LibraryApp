@@ -1,0 +1,24 @@
+﻿@model LibraryApp.Models.Socio
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link href="~/Content/Bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/Bootstrap/bootstrap-grid.min.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width" />
+    <title>EliminarCuenta</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <h1 class="display-2 text-danger"> Eliminar mi Cuenta </h1>
+        <input type="submit" class="btn-danger" value="Eliminar mi Cuenta"> 
+        <br>
+        @Html.ActionLink("Volver", "IniciarSesion", "", new { style = "text-allign:center;" })
+    </div>
+</body>
+</html>

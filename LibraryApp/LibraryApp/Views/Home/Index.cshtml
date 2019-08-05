@@ -1,0 +1,59 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link href="~/Content/CSS/Index.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/4e9acb012c.js"></script>
+    <link href="~/Content/Bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/Bootstrap/bootstrap-grid.min.css" rel="stylesheet" />
+    <link href="~/Content/FontAwesome/all.min.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div class="container main_content">
+        <div class="row">
+            <div class="col-4">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="~/Content/Images/bookSearch.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Buscar un libro</h5>
+                        <p class="card-text">Explora el catalogo de libros disponibles</p>
+                        @Html.ActionLink("Buscar", "Buscar","Consultar","", new { @class = "btn btn-primary" })
+                    </div>
+                </div>
+                <!-- Card -->
+            </div>
+            <div class="col-4">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="~/Content/Images/bookRent.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Rentar un libro</h5>
+                        <p class="card-text">Si eres socio, tiene derecho a rentar nuestros libros</p>
+                        @Html.ActionLink("Rentar", "IniciarSesion", "Socio", "", new { @class = "btn btn-dark" })
+                    </div>
+                </div>
+                <!-- Card -->
+            </div>
+            <div class="col-4">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="~/Content/Images/library.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Manejar Libreria</h5>
+                        <p class="card-text">Maneja el Catalogo y a los Socios de la libreria. </p>
+                        @Html.ActionLink("Gestionar", "Administracion", "Biblioteca", "", new { @class = "btn btn-secondary" })
+                        
+                    </div>
+                </div>
+                <!-- Card -->
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

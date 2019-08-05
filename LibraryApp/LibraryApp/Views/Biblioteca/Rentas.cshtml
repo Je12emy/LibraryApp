@@ -1,0 +1,101 @@
+﻿@model LibraryApp.Models.Socio
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link href="~/Content/CSS/Buscar.css" rel="stylesheet" />
+    <link href="~/Content/Bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/Bootstrap/bootstrap-grid.min.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width" />
+    <script src="~/Content/JS/buscar.js"></script>
+    <title>Rentas</title>
+</head>
+<body>
+    <div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1 class="display-3">Listado de Prestamos</h1>
+                </div>
+            </div>
+
+            <div class="row mb-4 mt-4 text-center">
+                <div class="col-12">
+                    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Buscar por Codigo de Socio" title="Type in a name">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    @if (@ViewData["ListaPrestamos"] != null)
+                    {
+                        List<LibraryApp.Models.Prestamo> listaPrestamos = ViewData["ListaPrestamos"] as List<LibraryApp.Models.Prestamo>;
+
+                        <div class="table-responsive">
+                            <table class="table table-hover" id="myTable">
+                                <thead class="thead-dark">
+                                    <tr>
+                                        <th scope="col"> Codigo de Prestamo </th>
+                                        <th scope="col"> Codigo de Socio </th>
+                                        <th scope="col"> Codigo de Album </th>
+                                        <th scope="col"> Fecha de Prestamos </th>
+                                        <th scope="col"> Estado </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (LibraryApp.Models.Prestamo prestamo in listaPrestamos)
+                                    {
+                                        <tr>
+                                            <th scope="col"> @prestamo.codigoPrestamo </th>
+                                            <td scope="col"> @prestamo.codigoSocio </td>
+                                            <td scope="col"> @prestamo.codigoLibro </td>
+                                            @if (Convert.ToBoolean(prestamo.estado))
+                                            {
+                                                <td scope="col" style="color:#27ae60"> @prestamo.fechaReserva </td>
+                                                <td scope="col" style="color:#27ae60"> No pendiente </td>
+                                            }
+                                            else
+                                            {
+                                                <td scope="col" style="color:#c0392b"> @prestamo.fechaReserva </td>
+                                                <td scope="col" style="color:#c0392b"> Pendiente </td>
+                                            }
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+
+                    }
+                    else
+                    {
+                        <h1 class="display-3 text-center"> Parece que no hay socios registrados </h1>
+                    }
+
+                </div>
+
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="list-group">
+                        @Html.ActionLink("Agregar un Prestamo", "AgregarPrestamo", "", new { @class = "list-group-item list-group-item-action " })
+
+                        @Html.ActionLink("Modificar un Prestamo", "ModificarPrestamo", "", new { @class = "list-group-item list-group-item-action " })
+                        @Html.ActionLink("Eliminar un Prestamo", "EliminarPrestamo", "", new { @class = "list-group-item list-group-item-action " })
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center">
+                @Html.ActionLink("Volver", "Administracion")
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
+

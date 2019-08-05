@@ -1,0 +1,93 @@
+﻿@model LibraryApp.Models.Socio
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link href="~/Content/CSS/Buscar.css" rel="stylesheet" />
+    <script src="~/Content/JS/buscar.js"></script>
+    <link href="~/Content/Bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/Bootstrap/bootstrap-grid.min.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Socios</title>
+</head>
+<body>
+    <div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <h1 class="display-3">Listado de Socios</h1>
+                </div>
+            </div>
+
+            <div class="row mb-4 mt-4 text-center">
+                <div class="col-6">
+                    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Buscar por nombre" title="Type in a name">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    @if (@ViewData["ListaSocios"] != null)
+                    {
+                        List<LibraryApp.Models.Socio> listaSocios = ViewData["ListaSocios"] as List<LibraryApp.Models.Socio>;
+
+                        <div class="table-responsive">
+                            <table class="table table-hover" id="myTable">
+                                <thead class="thead-dark">
+                                    <tr>
+                                        <th scope="col"> Codigo de Socio </th>
+                                        <th scope="col"> Nombre Completo </th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (LibraryApp.Models.Socio socio in listaSocios)
+                                    {
+                                        <tr>
+                                            <th scope="col"> @socio.codigoSocio </th>
+                                            <td> @socio.nombreSocio @socio.primerApellido @socio.segundoApellido</td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+
+                    }
+                    else
+                    {
+                        <h1 class="display-3 text-center"> Parece que no hay socios registrados </h1>
+                    }
+
+                </div>
+                <div class="col-6">
+                    <div class="text-center">
+                        @using (Html.BeginForm())
+                        {
+
+
+                            <div class="text-center">
+                                <div class="input-group mb-3 text-center">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="basic-addon3">Codigo de Socio</span>
+                                    </div>
+                                    @Html.TextBoxFor(x => x.codigoSocio, new { @class = "form-control", @id = "codigoSocio", @type = "text" })
+                                </div>
+                            </div>
+                            <input type="submit" class="btn-dark" placeholder="Comprobar" value="Comprobar">
+
+                        }
+                    </div>
+                </div>
+            </div>
+            <div class="text-center">
+                @Html.ActionLink("Volver", "Administracion")
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

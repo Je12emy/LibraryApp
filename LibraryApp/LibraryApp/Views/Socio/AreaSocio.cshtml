@@ -1,0 +1,59 @@
+﻿@model LibraryApp.Models.Socio
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link href="~/Content/Bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/Bootstrap/bootstrap-grid.min.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Socio</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="display-2 text-center"> Tu Informacion </h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Codigo de Cliente</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Primer Apellido</th>
+                            <th scope="col">Segundo Apellido</th>
+                            <th scope="col">Direccion </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="col">@Model.codigoSocio</th>
+                            <td>@Model.nombreSocio</td>
+                            <td>@Model.primerApellido</td>
+                            <td>@Model.segundoApellido</td>
+                            <td>@Model.direccionSocio</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1 class="display-3"> Acciones </h1> <br>
+                @Html.ActionLink("Modificar mis Datos","ModificarInformacion")
+                <br>
+                @Html.ActionLink("Eliminar mi Cuenta","Eliminar")
+                <br>
+                @Html.ActionLink("Volver", "IniciarSesion", "", new { style = "text-allign:center;" })
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+﻿@model LibraryApp.Models.Prestamo
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link href="~/Content/Bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/Bootstrap/bootstrap-grid.min.css" rel="stylesheet" />
+    <link href="~/Content/CSS/Login.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Agregar un Libro</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="box">
+                <h1> Agregar Prestamo </h1>
+                <div class="col-12">
+                    @using (Html.BeginForm())
+            {
+                        <label for="codigoSocio"> Codigo de Socio </label>
+                        @Html.TextBoxFor(x => x.codigoSocio, new { @class = "form-control", @type = "number", @id = "codigoSocio", @placeholder = "Ingrese el Codigo del Socio" })
+
+                        <label for="codigoLibro"> Codigo de Libro </label>
+                        @Html.TextBoxFor(x => x.codigoLibro, new { @class = "form-control", @type = "number", @id = "codigoLibro", @placeholder = "Ingrese el Codigo del Prestamo" })
+
+                        <label for="fechaPrestamo"> Fecha de Prestamo </label>
+                        @Html.TextBoxFor(x => x.fechaReserva, new { @class = "form-control", @type = "datetime-local", @id = "fechaPrestamo", @placeholder = "Ingrese el Codigo del Prestamo" })
+
+                        <br>
+                        <input type="submit" class="btn-primary" value="Agregar">
+                    }
+                </div>
+                <div class="text-center">
+                    @Html.ActionLink("Volver", "Rentas")
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
